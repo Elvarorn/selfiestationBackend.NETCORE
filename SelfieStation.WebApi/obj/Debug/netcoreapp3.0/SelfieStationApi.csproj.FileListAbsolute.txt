@@ -1,0 +1,36 @@
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\obj\Debug\netcoreapp3.0\SelfieStationApi.csprojAssemblyReference.cache
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\obj\Debug\netcoreapp3.0\staticwebassets\SelfieStationApi.StaticWebAssets.Manifest.cache
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\obj\Debug\netcoreapp3.0\staticwebassets\SelfieStationApi.StaticWebAssets.xml
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\obj\Debug\netcoreapp3.0\SelfieStationApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\obj\Debug\netcoreapp3.0\SelfieStationApi.AssemblyInfoInputs.cache
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\obj\Debug\netcoreapp3.0\SelfieStationApi.AssemblyInfo.cs
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\bin\Debug\netcoreapp3.0\appsettings.Development.json
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\bin\Debug\netcoreapp3.0\appsettings.json
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\bin\Debug\netcoreapp3.0\SelfieStationApi.exe
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\bin\Debug\netcoreapp3.0\SelfieStationApi.deps.json
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\bin\Debug\netcoreapp3.0\SelfieStationApi.runtimeconfig.json
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\bin\Debug\netcoreapp3.0\SelfieStationApi.runtimeconfig.dev.json
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\bin\Debug\netcoreapp3.0\SelfieStationApi.dll
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\bin\Debug\netcoreapp3.0\SelfieStationApi.pdb
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\obj\Debug\netcoreapp3.0\SelfieStationApi.RazorTargetAssemblyInfo.cache
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\obj\Debug\netcoreapp3.0\SelfieStationApi.dll
+C:\Users\Elvar\Documents\selfie station dotnetcore\SelfieStationApi\obj\Debug\netcoreapp3.0\SelfieStationApi.pdb
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\appsettings.Development.json
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\appsettings.json
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\SelfieStationApi.exe
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\SelfieStationApi.deps.json
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\SelfieStationApi.runtimeconfig.json
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\SelfieStationApi.runtimeconfig.dev.json
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\SelfieStationApi.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\SelfieStationApi.pdb
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\SelfieStationApi.csprojAssemblyReference.cache
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\staticwebassets\SelfieStationApi.StaticWebAssets.Manifest.cache
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\staticwebassets\SelfieStationApi.StaticWebAssets.xml
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\SelfieStationApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\SelfieStationApi.AssemblyInfoInputs.cache
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\SelfieStationApi.AssemblyInfo.cs
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\SelfieStationApi.RazorTargetAssemblyInfo.cache
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\SelfieStationApi.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\SelfieStationApi.pdb
