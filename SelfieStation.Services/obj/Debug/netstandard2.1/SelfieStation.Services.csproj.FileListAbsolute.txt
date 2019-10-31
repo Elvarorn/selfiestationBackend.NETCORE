@@ -1,0 +1,13 @@
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\bin\Debug\netstandard2.1\SelfieStation.Services.deps.json
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\bin\Debug\netstandard2.1\SelfieStation.Services.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\bin\Debug\netstandard2.1\SelfieStation.Services.pdb
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\bin\Debug\netstandard2.1\SelfieStation.Models.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\bin\Debug\netstandard2.1\SelfieStation.Repositories.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\bin\Debug\netstandard2.1\SelfieStation.Models.pdb
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\bin\Debug\netstandard2.1\SelfieStation.Repositories.pdb
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\obj\Debug\netstandard2.1\SelfieStation.Services.csprojAssemblyReference.cache
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\obj\Debug\netstandard2.1\SelfieStation.Services.AssemblyInfoInputs.cache
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\obj\Debug\netstandard2.1\SelfieStation.Services.AssemblyInfo.cs
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\obj\Debug\netstandard2.1\SelfieStation.Services.csproj.CopyComplete
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\obj\Debug\netstandard2.1\SelfieStation.Services.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Services\obj\Debug\netstandard2.1\SelfieStation.Services.pdb

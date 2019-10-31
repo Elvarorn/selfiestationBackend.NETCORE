@@ -1,0 +1,11 @@
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\bin\Debug\netstandard2.1\SelfieStation.Repositories.deps.json
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\bin\Debug\netstandard2.1\SelfieStation.Repositories.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\bin\Debug\netstandard2.1\SelfieStation.Repositories.pdb
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\bin\Debug\netstandard2.1\SelfieStation.Models.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\bin\Debug\netstandard2.1\SelfieStation.Models.pdb
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\obj\Debug\netstandard2.1\SelfieStation.Repositories.csprojAssemblyReference.cache
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\obj\Debug\netstandard2.1\SelfieStation.Repositories.AssemblyInfoInputs.cache
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\obj\Debug\netstandard2.1\SelfieStation.Repositories.AssemblyInfo.cs
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\obj\Debug\netstandard2.1\SelfieStation.Repositories.csproj.CopyComplete
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\obj\Debug\netstandard2.1\SelfieStation.Repositories.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.Repositories\obj\Debug\netstandard2.1\SelfieStation.Repositories.pdb
