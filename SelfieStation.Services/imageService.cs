@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using SelfieStation.Repositories;
-using SelfieStationApi.Models.Entities;
-
+using SelfieStation.Models.Entities;
+using SelfieStation.Models.InputModels;
 
 namespace SelfieStation.Services
 {
@@ -15,16 +15,21 @@ namespace SelfieStation.Services
             _ImageRepository = imgRep;
         }
 
-        public imageInfoEntity addImageInfo(imageInfoEntity imageInfo)
+        public imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo)
         {
-            throw new NotImplementedException();
+            return _ImageRepository.addImageInfo(imageInfo);
         }
 
         public IEnumerable<imageInfoEntity> getAllImageInfo() => _ImageRepository.getAllImageInfo();
 
-        public imageInfoEntity getImageInfo(int id)
+        public imageInfoEntity getImageInfoById(int id)
         {
-            throw new NotImplementedException();
+            return _ImageRepository.getImageInfoById(id);
+        }
+
+        public void UpdateImageInfoById(ImageInfoEditInputModel model, int id)
+        {
+            _ImageRepository.UpdateImageInfoById(model, id);
         }
     }
 }

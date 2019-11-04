@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
-using SelfieStationApi.Models.Entities;
+using SelfieStation.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace SelfieStation.Repositories.data

@@ -1,15 +1,19 @@
 
 
 using System.Collections.Generic;
-using SelfieStationApi.Models.Entities;
+using System.Threading.Tasks;
+using SelfieStation.Models.Entities;
+using SelfieStation.Models.InputModels;
 
 namespace SelfieStation.Services
 {
     public interface IImageService
     {
-        imageInfoEntity getImageInfo(int id);
+        imageInfoEntity getImageInfoById(int id);
         IEnumerable<imageInfoEntity> getAllImageInfo();
-        imageInfoEntity addImageInfo(imageInfoEntity imageInfo);
+        imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo);
+
+        void UpdateImageInfoById(ImageInfoEditInputModel model, int id);
 
 
 

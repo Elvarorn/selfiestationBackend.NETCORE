@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace SelfieStationApi.Models.Entities
+namespace SelfieStation.Models.Entities
 {
     public class imageInfoEntity
     {

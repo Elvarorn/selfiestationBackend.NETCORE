@@ -1,6 +1,6 @@
 using System;
 
-namespace SelfieStationApi.Models.DTO
+namespace SelfieStation.Models.DTO
 {
     public class imageInfoDto
     {

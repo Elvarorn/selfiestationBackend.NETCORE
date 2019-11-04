@@ -1,17 +1,17 @@
 
 
 using System.Collections.Generic;
-using SelfieStationApi.Models.Entities;
+using SelfieStation.Models.Entities;
+using SelfieStation.Models.InputModels;
 
 namespace SelfieStation.Repositories
 {
     public interface IImageRepository
     {
-        imageInfoEntity getImageInfo(int id);
+        imageInfoEntity getImageInfoById(int id);
         IEnumerable<imageInfoEntity> getAllImageInfo();
-        imageInfoEntity addImageInfo(imageInfoEntity imageInfo);
-
-
+        imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo);
+        void UpdateImageInfoById(ImageInfoEditInputModel model, int id);
 
     }
 }
