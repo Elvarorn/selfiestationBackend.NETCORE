@@ -24,7 +24,7 @@ namespace SelfieStation.WebApi.Controllers
         [HttpGet]
         public IActionResult getAllImageInfo()
         {
-            IEnumerable<imageInfoEntity> allInfo = _imageService.getAllImageInfo();
+            IEnumerable<imageInfoEntity> allInfo = _imageService.getAllImageInfo(this.HttpContext);
             return Ok(allInfo);
         }
 
@@ -35,6 +35,12 @@ namespace SelfieStation.WebApi.Controllers
             var author = _imageService.getImageInfoById(id);
             return Ok(author);
         }
+
+        //[Route("/ad/{id:int}", Name = "GetImageInfoById")]
+        //public IActionResult getImageByIdLowResAd(int id)
+        // {
+        //     return Ok();
+        //}
 
 
         [HttpPost]
@@ -57,5 +63,7 @@ namespace SelfieStation.WebApi.Controllers
 
             return NoContent();
         }
+
+
     }
 }

@@ -177,6 +177,12 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "dependencies": {
+            "Cloudinary.Core": {
+              "target": "Package",
+              "version": "[1.31.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -240,6 +246,10 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "Mandrill.net": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.0.0, )"
