@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SelfieStation.Models.Entities;
@@ -10,7 +11,7 @@ using SelfieStation.Services;
 namespace SelfieStation.WebApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/Images")]
     public class ImageController : ControllerBase
     {
         public IImageService _imageService;
@@ -25,6 +26,7 @@ namespace SelfieStation.WebApi.Controllers
         public IActionResult getAllImageInfo()
         {
             IEnumerable<imageInfoEntity> allInfo = _imageService.getAllImageInfo(this.HttpContext);
+            System.Console.WriteLine("check");
             return Ok(allInfo);
         }
 
@@ -42,13 +44,15 @@ namespace SelfieStation.WebApi.Controllers
         //     return Ok();
         //}
 
-
+        [EnableCors("AllowMyOrigin")]
         [HttpPost]
         public IActionResult CreateNewImageInfo([FromBody] ImageInfoInputModel body)
         {
+            System.Console.WriteLine("kooooooooooooooooooooooooooooooooommmmmmmmmon");
             if (!ModelState.IsValid) { return BadRequest("Model is not properly formatted."); }
 
             var entity = _imageService.addImageInfo(body);
+            System.Console.WriteLine("dis de body: ", body);
 
             return CreatedAtRoute("GetImageInfoById", new { id = entity.ID }, null);
         }
