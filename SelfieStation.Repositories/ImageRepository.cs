@@ -26,7 +26,8 @@ namespace SelfieStation.Repositories
                 timeStamp = imageInfo.timeStamp,
                 hasEmailBeenSent = false,
                 success = false,
-                hasImageBeenBought = false
+                hasImageBeenBought = false,
+                Url = imageInfo.Url
 
             };
             _context.imageInfo.Add(newEnt);

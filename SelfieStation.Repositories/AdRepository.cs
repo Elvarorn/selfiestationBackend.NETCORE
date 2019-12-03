@@ -21,9 +21,9 @@ namespace SelfieStation.Repositories
         }
 
 
-        public async Task<ActionResult<IEnumerable<AdEntity>>> GetadInfo()
+        public IEnumerable<AdEntity> GetadInfo()
         {
-            return await _context.adInfo.ToListAsync();
+            return _context.adInfo.ToList();
         }
 
         public async Task<ActionResult<AdEntity>> GetAd(int id)

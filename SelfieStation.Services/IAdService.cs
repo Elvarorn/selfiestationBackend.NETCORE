@@ -7,7 +7,7 @@ namespace SelfieStation.Services
 {
     public interface IAdService
     {
-        Task<ActionResult<IEnumerable<AdEntity>>> GetadInfo();
+        IEnumerable<AdEntity> GetadInfo();
         Task<ActionResult<AdEntity>> GetAd(int id);
         Task<IActionResult> PutAd(int id, AdEntity adEntity);
         Task<ActionResult<AdEntity>> PostAd(AdEntity adEntity);

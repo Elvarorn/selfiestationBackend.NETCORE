@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -24,9 +25,11 @@ namespace SelfieStation.WebApi.Controllers
 
         // GET: api/Ad
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AdEntity>>> GetadInfo()
+        public ActionResult GetadInfo()
         {
-            return Ok(await _adService.GetadInfo());
+            var ching = _adService.GetadInfo();
+            Debug.WriteLine(ching);
+            return Ok(ching);
         }
 
         // GET: api/Ad/5
@@ -59,9 +62,6 @@ namespace SelfieStation.WebApi.Controllers
             return NoContent();
         }
 
-        // POST: api/Ad
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
         public async Task<ActionResult<AdEntity>> PostAdEntity(AdEntity adEntity)
         {

@@ -44,7 +44,6 @@ namespace SelfieStation.WebApi.Controllers
         //     return Ok();
         //}
 
-        [EnableCors("AllowMyOrigin")]
         [HttpPost]
         public IActionResult CreateNewImageInfo([FromBody] ImageInfoInputModel body)
         {

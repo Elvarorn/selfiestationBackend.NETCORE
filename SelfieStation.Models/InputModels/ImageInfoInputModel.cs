@@ -8,6 +8,7 @@ namespace SelfieStation.Models.InputModels
         public string imageGUID { get; set; }
         public string email { get; set; }
         public DateTime timeStamp { get; set; }
+        public string Url { get; set; }
 
     }
 }
