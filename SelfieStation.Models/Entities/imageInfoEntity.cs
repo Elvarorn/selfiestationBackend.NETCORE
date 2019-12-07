@@ -14,7 +14,8 @@ namespace SelfieStation.Models.Entities
         [Required]
         public DateTime timeStamp { get; set; }
         [Required]
-        public string Url { get; set; }
+        public string premiumUrl { get; set; }
+        public string freeUrl { get; set; }
         [Required]
         public Boolean hasEmailBeenSent { get; set; } = false;
         [Required]

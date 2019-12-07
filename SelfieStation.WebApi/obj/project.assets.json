@@ -19,7 +19,59 @@
           "lib/netstandard1.6/Cloudinary.Core.dll": {}
         }
       },
-      "Mandrill.net/7.1.0": {
+      "CloudinaryDotNet/1.9.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
+        }
+      },
+      "MailChimp.NET/1.1.92": {
+        "type": "package",
+        "dependencies": {
+          "ServiceStack.Text": "[3.9.71]"
+        },
+        "compile": {
+          "lib/net40/MailChimp.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MailChimp.dll": {}
+        }
+      },
+      "MailChimp.Net.V3/4.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "1.1.1",
+          "Microsoft.Extensions.Options": "1.1.2",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netstandard1.3/MailChimp.Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/MailChimp.Net.dll": {}
+        }
+      },
+      "Mandrill/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard1.1/Mandrill.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Mandrill.dll": {}
+        }
+      },
+      "Mandrill.net/7.1.1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "12.0.1"
@@ -196,6 +248,19 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
         }
       },
+      "Microsoft.AspNetCore.JsonPatch/3.0.0-preview3-19153-02": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.6.0-preview3.19128.7",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.JsonPatch.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.JsonPatch.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -247,6 +312,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.DataAnnotations.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.0.0-preview3-19153-02": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "3.0.0-preview3-19153-02",
+          "Newtonsoft.Json": "12.0.1",
+          "Newtonsoft.Json.Bson": "1.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor/2.2.0": {
@@ -1366,6 +1445,15 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.OpenApi/1.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.Web.CodeGeneration/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -1544,13 +1632,25 @@
           "build/netstandard2.0/_._": {}
         }
       },
-      "Newtonsoft.Json/12.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Newtonsoft.Json.Bson/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
         }
       },
       "NuGet.Frameworks/4.7.0": {
@@ -1770,6 +1870,74 @@
             "rid": "win-x86"
           }
         }
+      },
+      "ServiceStack.Text/3.9.71": {
+        "type": "package",
+        "compile": {
+          "lib/net35/ServiceStack.Text.dll": {}
+        },
+        "runtime": {
+          "lib/net35/ServiceStack.Text.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "4.0.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "4.0.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/5.0.0-rc4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
+          "Microsoft.OpenApi": "1.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/5.0.0-rc4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.0.0-preview3-19153-02",
+          "Microsoft.OpenApi": "1.1.1",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0-rc4"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/5.0.0-rc4": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "System.AppContext/4.1.0": {
         "type": "package",
@@ -3667,6 +3835,8 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Cloudinary.Core": "1.31.0",
+          "MailChimp.NET": "1.1.92",
+          "Mandrill": "3.1.0",
           "SelfieStation.Models": "1.0.0",
           "SelfieStation.Repositories": "1.0.0"
         },
@@ -3692,16 +3862,77 @@
         "lib/netstandard1.6/Cloudinary.Core.dll"
       ]
     },
-    "Mandrill.net/7.1.0": {
-      "sha512": "l0yWCgZKjZokN3NB3k0PSuoe3xYufJpPz9SLlOjjv+VjaaeOpbXdh2FQxwag4vHI7wC9Z1Qzlycpj2lp9UU75Q==",
+    "CloudinaryDotNet/1.9.1": {
+      "sha512": "E5nJnmmBiKcbnhNhjWai5STm+8lOgSwlbCiHJ10IOnFN4dkIyhi8IyswT5bESEPo2dDG7Jt/0JESoQVUPz4lIg==",
       "type": "package",
-      "path": "mandrill.net/7.1.0",
+      "path": "cloudinarydotnet/1.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cloudinarydotnet.1.9.1.nupkg.sha512",
+        "cloudinarydotnet.nuspec",
+        "lib/net45/CloudinaryDotNet.dll",
+        "lib/net45/CloudinaryDotNet.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "lib/net45/System.Text.Encodings.Web.dll",
+        "lib/netcore/CloudinaryDotNet.deps.json",
+        "lib/netcore/CloudinaryDotNet.dll",
+        "lib/netcore/CloudinaryDotNet.xml",
+        "lib/netstandard1.3/CloudinaryDotNet.deps.json",
+        "lib/netstandard1.3/CloudinaryDotNet.dll",
+        "lib/netstandard1.3/CloudinaryDotNet.xml"
+      ]
+    },
+    "MailChimp.NET/1.1.92": {
+      "sha512": "/yY9HRaGFHq9cWQnvm5/ZEZ0PeIw+BwgDechLMnxddGPXVrKhcKEy9bX48Tp05MziCrRhWt7p9YoMSRfN6201w==",
+      "type": "package",
+      "path": "mailchimp.net/1.1.92",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/MailChimp.dll",
+        "lib/net40/MailChimp.dll",
+        "mailchimp.net.1.1.92.nupkg.sha512",
+        "mailchimp.net.nuspec"
+      ]
+    },
+    "MailChimp.Net.V3/4.2.1": {
+      "sha512": "0mpr0Mq3hXEz5zMaXRgK/NLbUJ5oldDHTpes83VISdjiKVo+IdTf5AZaLKBNbMfdInAg0AXeI2elFkW3Bq7uEQ==",
+      "type": "package",
+      "path": "mailchimp.net.v3/4.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net45/MailChimp.Net.dll",
+        "lib/netstandard1.3/MailChimp.Net.dll",
+        "mailchimp.net.v3.4.2.1.nupkg.sha512",
+        "mailchimp.net.v3.nuspec"
+      ]
+    },
+    "Mandrill/3.1.0": {
+      "sha512": "naSAcuzR/3SzfQ+XA08kIfRtVsdPkTG/0xF9Afei3Ir/pC/SaiXA3OXrVk873q4cyzI6uFHTlWflTyseBjZq8g==",
+      "type": "package",
+      "path": "mandrill/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Mandrill.dll",
+        "mandrill.3.1.0.nupkg.sha512",
+        "mandrill.nuspec"
+      ]
+    },
+    "Mandrill.net/7.1.1": {
+      "sha512": "5pHsgtcYHNlsDwPhTiktnWOJzRiblmO4xbZnjppHqeHveV8aBHB040XkgbLWZSTML1PnyEOD6nAPj4hGiXfdeg==",
+      "type": "package",
+      "path": "mandrill.net/7.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/Mandrill.net.dll",
         "lib/netstandard2.0/Mandrill.net.dll",
-        "mandrill.net.7.1.0.nupkg.sha512",
+        "mandrill.net.7.1.1.nupkg.sha512",
         "mandrill.net.nuspec"
       ]
     },
@@ -3861,6 +4092,19 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
+    "Microsoft.AspNetCore.JsonPatch/3.0.0-preview3-19153-02": {
+      "sha512": "XexwYKf6w1QUZV5OJpgvopmjyLtD+4wcW4Bd1atcWp59/RP9Dg2iKjaoozJK7OsWjfFmrVczhQ/V2HkOiPCczA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.jsonpatch/3.0.0-preview3-19153-02",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.JsonPatch.dll",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.JsonPatch.xml",
+        "microsoft.aspnetcore.jsonpatch.3.0.0-preview3-19153-02.nupkg.sha512",
+        "microsoft.aspnetcore.jsonpatch.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
       "sha512": "ET6uZpfVbGR1NjCuLaLy197cQ3qZUjzl7EG5SL4GfJH/c9KRE89MMBrQegqWsh0w1iRUB/zQaK0anAjxa/pz4g==",
       "type": "package",
@@ -3898,6 +4142,19 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.DataAnnotations.xml",
         "microsoft.aspnetcore.mvc.dataannotations.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.mvc.dataannotations.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.0.0-preview3-19153-02": {
+      "sha512": "+aVwCVmUWwXdhbCIvqImnU5HevVbZKW82O5m/JELqYVO/+L0usnEZCvSbOJr0XdN3k3vd6NjNU5+TBhOHff/lQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/3.0.0-preview3-19153-02",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
+        "microsoft.aspnetcore.mvc.newtonsoftjson.3.0.0-preview3-19153-02.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Razor/2.2.0": {
@@ -5177,6 +5434,23 @@
         "runtime.json"
       ]
     },
+    "Microsoft.OpenApi/1.1.1": {
+      "sha512": "96jr5MPyQ9WzxiBlTH2czVLwpOn7a7Y6j1vRHIZ4sIOFSAclPW2G+iQwnbw7rFBabTALiFJJ7q5Z5r8s+RmGvw==",
+      "type": "package",
+      "path": "microsoft.openapi/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/Microsoft.OpenApi.dll",
+        "lib/net46/Microsoft.OpenApi.pdb",
+        "lib/net46/Microsoft.OpenApi.xml",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.1.1.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
     "Microsoft.VisualStudio.Web.CodeGeneration/3.0.0": {
       "sha512": "SmRY++qLXhj6SOuorVgHr/Dr1Nmj+/zxJnwt6see6BJio5wcGNuGp+tvMDVRkhySks09hGC5aUKNkSbf3lo1Sw==",
       "type": "package",
@@ -5804,43 +6078,56 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.1": {
-      "sha512": "pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.1",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.pdb",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.pdb",
         "lib/net35/Newtonsoft.Json.xml",
         "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.pdb",
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.pdb",
         "lib/net45/Newtonsoft.Json.xml",
         "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.pdb",
         "lib/netstandard1.0/Newtonsoft.Json.xml",
         "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.pdb",
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.pdb",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.1.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "Newtonsoft.Json.Bson/1.0.2": {
+      "sha512": "QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
+      "type": "package",
+      "path": "newtonsoft.json.bson/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net45/Newtonsoft.Json.Bson.dll",
+        "lib/net45/Newtonsoft.Json.Bson.pdb",
+        "lib/net45/Newtonsoft.Json.Bson.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.Bson.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.Bson.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.Bson.xml",
+        "newtonsoft.json.bson.1.0.2.nupkg.sha512",
+        "newtonsoft.json.bson.nuspec"
       ]
     },
     "NuGet.Frameworks/4.7.0": {
@@ -6145,6 +6432,80 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "ServiceStack.Text/3.9.71": {
+      "sha512": "+nIZF3d2o50W4/DjtfN21AzH1shaRlEiixgFISx3v5WD4WJVRd3WLmW75+SIiPOnCQAoZ+zbGX91hrBNkx+7xg==",
+      "type": "package",
+      "path": "servicestack.text/3.9.71",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/ServiceStack.Text.XML",
+        "lib/net35/ServiceStack.Text.dll",
+        "lib/sl4-windowsphone71/ServiceStack.Text.WP.XML",
+        "lib/sl4-windowsphone71/ServiceStack.Text.WP.dll",
+        "lib/sl4/ServiceStack.Text.dll",
+        "lib/sl4/ServiceStack.Text.xml",
+        "lib/sl5/ServiceStack.Text.XML",
+        "lib/sl5/ServiceStack.Text.dll",
+        "servicestack.text.3.9.71.nupkg.sha512",
+        "servicestack.text.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore/4.0.1": {
+      "sha512": "Zq6lkFieuFPNDwXwQ+e8i5zy2VMrexcRFU8mQORxqIc8r7Y+qKX63vg57yL1HeGCINHQGGzxGfw2rP63IeEqhg==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.dll",
+        "swashbuckle.aspnetcore.4.0.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Swagger/5.0.0-rc4": {
+      "sha512": "oZPhUbTeTgCiC7IbB0K9JNPOX2V2vr2ZNRXZdv4Qucg+AegOup5hsecghktsJ1/MrNFsLFmUULuXMjxCCmeX1w==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swagger/5.0.0-rc4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "swashbuckle.aspnetcore.swagger.5.0.0-rc4.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/5.0.0-rc4": {
+      "sha512": "j0s+/BRIl5zRJu3wN+CXESU1FLYaDvFKWcLdX0ftGx4VtUGDf3aECX5UZvMReak6pb1O6fAU6felmDBEyfDyUg==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggergen/5.0.0-rc4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "swashbuckle.aspnetcore.swaggergen.5.0.0-rc4.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/5.0.0-rc4": {
+      "sha512": "38whGu1o32TAWPSODKQDXkOoTIluE8mDZ02mCsLXv+MfBY/c/BtdZ+XsFALGeWjWGU/ZqCT0lQN7ogvPbh84Yg==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggerui/5.0.0-rc4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "swashbuckle.aspnetcore.swaggerui.5.0.0-rc4.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -11062,7 +11423,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "Mandrill.net >= 7.1.0",
+      "CloudinaryDotNet >= 1.9.1",
+      "MailChimp.NET >= 1.1.92",
+      "MailChimp.Net.V3 >= 4.2.1",
+      "Mandrill.net >= 7.1.1",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 3.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.0.0",
@@ -11070,8 +11434,12 @@
       "Microsoft.EntityFrameworkCore.Tools.DotNet >= 2.0.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Tools >= 2.0.4",
+      "Newtonsoft.Json >= 12.0.3",
       "SelfieStation.Models >= 1.0.0",
-      "SelfieStation.Services >= 1.0.0"
+      "SelfieStation.Services >= 1.0.0",
+      "Swashbuckle.AspNetCore >= 4.0.1",
+      "Swashbuckle.AspNetCore.SwaggerGen >= 5.0.0-rc4",
+      "Swashbuckle.AspNetCore.SwaggerUi >= 5.0.0-rc4"
     ]
   },
   "packageFolders": {
@@ -11122,9 +11490,21 @@
     "frameworks": {
       "netcoreapp3.0": {
         "dependencies": {
+          "CloudinaryDotNet": {
+            "target": "Package",
+            "version": "[1.9.1, )"
+          },
+          "MailChimp.NET": {
+            "target": "Package",
+            "version": "[1.1.92, )"
+          },
+          "MailChimp.Net.V3": {
+            "target": "Package",
+            "version": "[4.2.1, )"
+          },
           "Mandrill.net": {
             "target": "Package",
-            "version": "[7.1.0, )"
+            "version": "[7.1.1, )"
           },
           "Microsoft.AspNetCore.Cors": {
             "target": "Package",
@@ -11155,6 +11535,22 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
             "target": "Package",
             "version": "[2.0.4, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
+          },
+          "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[4.0.1, )"
+          },
+          "Swashbuckle.AspNetCore.SwaggerGen": {
+            "target": "Package",
+            "version": "[5.0.0-rc4, )"
+          },
+          "Swashbuckle.AspNetCore.SwaggerUi": {
+            "target": "Package",
+            "version": "[5.0.0-rc4, )"
           }
         },
         "imports": [
@@ -11178,5 +11574,27 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MailChimp.NET 1.1.92' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MailChimp.NET",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ServiceStack.Text 3.9.71' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ServiceStack.Text",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    }
+  ]
 }

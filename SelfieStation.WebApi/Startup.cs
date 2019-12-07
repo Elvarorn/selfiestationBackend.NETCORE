@@ -8,6 +8,7 @@ using SelfieStation.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
 using SelfieStation.Services;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace SelfieStation
 {
@@ -37,6 +38,13 @@ namespace SelfieStation
             services.AddScoped<IAdRepository, AdRepository>();
             services.AddScoped<IAdService, AdService>();
             services.AddScoped<IImageService, imageService>();
+            services.AddScoped<IEmailService, EmailService>();
+
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "API docs", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +54,15 @@ namespace SelfieStation
             {
                 app.UseDeveloperExceptionPage();
             }
+
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseHttpsRedirection();
 

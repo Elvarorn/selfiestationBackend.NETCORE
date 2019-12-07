@@ -10,7 +10,7 @@ namespace SelfieStation.Repositories
     {
         imageInfoEntity getImageInfoById(int id);
         IEnumerable<imageInfoEntity> getAllImageInfo();
-        imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo);
+        imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo, string freeUrl);
         void UpdateImageInfoById(ImageInfoEditInputModel model, int id);
 
     }

@@ -17,7 +17,7 @@ namespace SelfieStation.Repositories
             _context = context;
         }
 
-        public imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo)
+        public imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo, string freeUrl)
         {
             imageInfoEntity newEnt = new imageInfoEntity()
             {
@@ -27,7 +27,8 @@ namespace SelfieStation.Repositories
                 hasEmailBeenSent = false,
                 success = false,
                 hasImageBeenBought = false,
-                Url = imageInfo.Url
+                premiumUrl = imageInfo.Url,
+                freeUrl = freeUrl
 
             };
             _context.imageInfo.Add(newEnt);

@@ -181,6 +181,14 @@
             "Cloudinary.Core": {
               "target": "Package",
               "version": "[1.31.0, )"
+            },
+            "MailChimp.NET": {
+              "target": "Package",
+              "version": "[1.1.92, )"
+            },
+            "Mandrill": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -246,9 +254,21 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.9.1, )"
+            },
+            "MailChimp.NET": {
+              "target": "Package",
+              "version": "[1.1.92, )"
+            },
+            "MailChimp.Net.V3": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
             "Mandrill.net": {
               "target": "Package",
-              "version": "[7.1.0, )"
+              "version": "[7.1.1, )"
             },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
@@ -279,6 +299,22 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
               "target": "Package",
               "version": "[2.0.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[5.0.0-rc4, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUi": {
+              "target": "Package",
+              "version": "[5.0.0-rc4, )"
             }
           },
           "imports": [

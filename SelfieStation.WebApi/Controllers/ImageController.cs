@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using CloudinaryDotNet;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -32,6 +34,7 @@ namespace SelfieStation.WebApi.Controllers
 
 
         [Route("{id:int}", Name = "GetImageInfoById")]
+        [HttpGet]
         public IActionResult getImageInfoById(int id)
         {
             var author = _imageService.getImageInfoById(id);
@@ -47,14 +50,15 @@ namespace SelfieStation.WebApi.Controllers
         [HttpPost]
         public IActionResult CreateNewImageInfo([FromBody] ImageInfoInputModel body)
         {
-            System.Console.WriteLine("kooooooooooooooooooooooooooooooooommmmmmmmmon");
             if (!ModelState.IsValid) { return BadRequest("Model is not properly formatted."); }
 
-            var entity = _imageService.addImageInfo(body);
-            System.Console.WriteLine("dis de body: ", body);
+            string lowresUrl = _imageService.getLowresImgUrlWithAd(body);
+            var entity = _imageService.addImageInfo(body, lowresUrl);
+
 
             return CreatedAtRoute("GetImageInfoById", new { id = entity.ID }, null);
         }
+
 
         [Route("{id:int}")]
         [HttpPut]

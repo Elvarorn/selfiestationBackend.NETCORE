@@ -50,12 +50,11 @@ namespace SelfieStation.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Url")
+                    b.Property<string>("email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("email")
-                        .IsRequired()
+                    b.Property<string>("freeUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("hasEmailBeenSent")
@@ -65,6 +64,10 @@ namespace SelfieStation.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("imageGUID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("premiumUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

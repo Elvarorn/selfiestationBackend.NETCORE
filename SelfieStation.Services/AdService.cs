@@ -8,16 +8,20 @@ using Microsoft.EntityFrameworkCore;
 using SelfieStation.Models.Entities;
 using SelfieStation.Repositories.data;
 using SelfieStation.Services;
+using CloudinaryDotNet;
 
 namespace SelfieStation.Repositories
 {
     public class AdService : IAdService
     {
-        private IAdRepository _adRepository;
 
+        private IAdRepository _adRepository;
+        private CloudinaryService _cloudinaryService;
         public AdService(IAdRepository adRepository)
         {
             _adRepository = adRepository;
+            Account acc = new Account("selfie-station", "731411764737164", "z5_lgjuUEBYBOA3PR_vBqL47cMw");
+            _cloudinaryService = new CloudinaryService(acc);
         }
 
 
