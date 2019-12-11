@@ -3,8 +3,6 @@ using System.Linq;
 using SelfieStation.Repositories.data;
 using SelfieStation.Models.Entities;
 using SelfieStation.Models.InputModels;
-using System;
-using System.Threading.Tasks;
 
 namespace SelfieStation.Repositories
 {

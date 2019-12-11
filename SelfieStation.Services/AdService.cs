@@ -1,12 +1,8 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using SelfieStation.Models.Entities;
-using SelfieStation.Repositories.data;
 using SelfieStation.Services;
 
 namespace SelfieStation.Repositories
@@ -24,9 +20,7 @@ namespace SelfieStation.Repositories
             _adRepository = adRepository;
             _authService = new AuthenticationService();
             whoHasAuth = "admin";
-
         }
-
 
         public IEnumerable<AdEntity> GetadInfo(HttpContext context)
         {
@@ -53,7 +47,6 @@ namespace SelfieStation.Repositories
             return await _adRepository.PostAd(adEntity);
         }
 
-
         public async Task<ActionResult<AdEntity>> DeleteAd(int id, HttpContext context)
         {
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
@@ -64,6 +57,5 @@ namespace SelfieStation.Repositories
         {
             return _adRepository.AdEntityExists(id);
         }
-
     }
 }

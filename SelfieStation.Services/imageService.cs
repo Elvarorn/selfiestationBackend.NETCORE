@@ -4,7 +4,6 @@ using SelfieStation.Repositories;
 using SelfieStation.Models.Entities;
 using SelfieStation.Models.InputModels;
 using Microsoft.AspNetCore.Http;
-using CloudinaryDotNet;
 using System.Threading.Tasks;
 
 namespace SelfieStation.Services
@@ -15,7 +14,6 @@ namespace SelfieStation.Services
         private IImageRepository _imageRepository;
         private IEmailService _emailService;
         private AuthenticationService _authService;
-
         private string whoHasAuth;
         public ImageService(IImageRepository imgRep, IEmailService emailServ)
         {
@@ -25,12 +23,10 @@ namespace SelfieStation.Services
             whoHasAuth = "admin";
         }
 
-
         public async Task<ImageInfoEntity> AddImageInfo(ImageInfoInputModel imageInfo, string freeUrl, HttpContext context)
         {
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
             string sucsess = await _emailService.SendEmailWithTemplate(imageInfo, freeUrl);
-
             return _imageRepository.AddImageInfo(imageInfo, freeUrl, sucsess);
         }
 

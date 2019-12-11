@@ -1,17 +1,12 @@
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using SelfieStation.Models.Entities;
-using SelfieStation.Repositories.data;
 using SelfieStation.Services;
 
 namespace SelfieStation.WebApi.Controllers
 {
+    // Endpoints for all requests that target ads.
     [Route("api/Ads")]
     [ApiController]
     public class AdController : ControllerBase
@@ -37,7 +32,6 @@ namespace SelfieStation.WebApi.Controllers
         public async Task<ActionResult<AdEntity>> GetAdEntity(int id)
         {
             var adEntity = await _adService.GetAd(id, this.HttpContext);
-
             if (adEntity == null)
             {
                 return NotFound();
@@ -47,8 +41,6 @@ namespace SelfieStation.WebApi.Controllers
         }
 
         // PUT: api/Ads/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAdEntity(int id, AdEntity adEntity)
         {
@@ -56,17 +48,16 @@ namespace SelfieStation.WebApi.Controllers
             {
                 return BadRequest();
             }
-
             await _adService.PutAd(id, adEntity, this.HttpContext);
 
             return NoContent();
         }
+
         // POST: api/Ads/5
         [HttpPost]
         public async Task<ActionResult<AdEntity>> PostAdEntity(AdEntity adEntity)
         {
             var adEntityCreated = await _adService.PostAd(adEntity, this.HttpContext);
-
             return CreatedAtAction("GetAdEntity", new { id = adEntity.Id }, adEntity);
         }
 

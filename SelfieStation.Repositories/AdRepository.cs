@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SelfieStation.Models.Entities;
@@ -14,12 +12,10 @@ namespace SelfieStation.Repositories
     public class AdRepository : IAdRepository
     {
         protected databaseContext _context;
-
         public AdRepository(databaseContext context)
         {
             _context = context;
         }
-
 
         public IEnumerable<AdEntity> GetadInfo()
         {
@@ -29,7 +25,6 @@ namespace SelfieStation.Repositories
         public async Task<ActionResult<AdEntity>> GetAd(int id)
         {
             var adEntity = await _context.adInfo.FindAsync(id);
-
             if (adEntity == null)
             {
                 return null;
@@ -40,11 +35,7 @@ namespace SelfieStation.Repositories
 
         public async Task<IActionResult> PutAd(int id, AdEntity adEntity)
         {
-            if (id != adEntity.Id)
-            {
-                //sumthin
-            }
-
+            if (id != adEntity.Id) { }
             _context.Entry(adEntity).State = EntityState.Modified;
 
             try
@@ -93,6 +84,5 @@ namespace SelfieStation.Repositories
         {
             return _context.adInfo.Any(e => e.Id == id);
         }
-
     }
 }

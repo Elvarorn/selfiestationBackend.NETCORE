@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 using Mandrill.Models;
 using System.Globalization;
 using MailChimp;
-using MailChimp.Helper;
-using MailChimp.Lists;
-using Newtonsoft.Json;
 using SelfieStation.Models.InputModels;
 
 namespace SelfieStation.Services

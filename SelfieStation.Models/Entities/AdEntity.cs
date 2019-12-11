@@ -12,6 +12,5 @@ namespace SelfieStation.Models.Entities
         public string GUID { get; set; }
         [Required]
         public string ImgURL { get; set; }
-
     }
 }

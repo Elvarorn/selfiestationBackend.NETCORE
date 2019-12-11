@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using CloudinaryDotNet;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using SelfieStation.Models.Entities;
 using SelfieStation.Models.InputModels;
 using SelfieStation.Services;
@@ -55,14 +49,11 @@ namespace SelfieStation.WebApi.Controllers
         public async Task<IActionResult> CreateNewImageInfo([FromBody] ImageInfoInputModel body)
         {
             if (!ModelState.IsValid) { return BadRequest("Model is not properly formatted."); }
-
             string lowresUrl = _imageService.GetLowresImgUrlWithAd(body);
             var entity = await _imageService.AddImageInfo(body, lowresUrl, this.HttpContext);
 
-
             return CreatedAtRoute("GetImageInfoById", new { id = entity.ID }, null);
         }
-
 
         // PUT: api/images/{id}
         [Route("{id:int}")]
@@ -70,12 +61,9 @@ namespace SelfieStation.WebApi.Controllers
         public IActionResult UpdateImageInfoById([FromBody] ImageInfoEditInputModel body, int id)
         {
             if (!ModelState.IsValid) { return BadRequest("Model is not properly formatted."); }
-
             _imageService.UpdateImageInfoById(body, id, this.HttpContext);
 
             return NoContent();
         }
-
-
     }
 }

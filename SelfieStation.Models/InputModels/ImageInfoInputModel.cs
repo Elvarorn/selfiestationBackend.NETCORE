@@ -1,6 +1,5 @@
 using System;
 
-
 namespace SelfieStation.Models.InputModels
 {
     public class ImageInfoInputModel
@@ -9,6 +8,5 @@ namespace SelfieStation.Models.InputModels
         public string email { get; set; }
         public DateTime timeStamp { get; set; }
         public string Url { get; set; }
-
     }
 }

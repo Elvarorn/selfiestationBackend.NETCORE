@@ -1,7 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-
 namespace SelfieStation.Models.Entities
 {
     public class ImageInfoEntity
@@ -22,6 +21,5 @@ namespace SelfieStation.Models.Entities
         public Boolean success { get; set; } = false;
         [Required]
         public Boolean hasImageBeenBought { get; set; } = false;
-
     }
 }
