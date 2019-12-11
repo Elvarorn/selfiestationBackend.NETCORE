@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SelfieStation.WebApi",
     "\\SelfieStation.WebApi\\Controllers"
   ],
-  "SelectedNode": "\\SelfieStation.WebApi\\Controllers",
+  "SelectedNode": "\\SelfieStation.WebApi",
   "PreviewInSolutionExplorer": false
 }

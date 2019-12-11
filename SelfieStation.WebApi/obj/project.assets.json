@@ -43,21 +43,6 @@
           "lib/net40/MailChimp.dll": {}
         }
       },
-      "MailChimp.Net.V3/4.2.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration": "1.1.1",
-          "Microsoft.Extensions.Options": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "12.0.2"
-        },
-        "compile": {
-          "lib/netstandard1.3/MailChimp.Net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/MailChimp.Net.dll": {}
-        }
-      },
       "Mandrill/3.1.0": {
         "type": "package",
         "dependencies": {
@@ -69,18 +54,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/Mandrill.dll": {}
-        }
-      },
-      "Mandrill.net/7.1.1": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/Mandrill.net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Mandrill.net.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -3911,20 +3884,6 @@
         "mailchimp.net.nuspec"
       ]
     },
-    "MailChimp.Net.V3/4.2.1": {
-      "sha512": "0mpr0Mq3hXEz5zMaXRgK/NLbUJ5oldDHTpes83VISdjiKVo+IdTf5AZaLKBNbMfdInAg0AXeI2elFkW3Bq7uEQ==",
-      "type": "package",
-      "path": "mailchimp.net.v3/4.2.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "lib/net45/MailChimp.Net.dll",
-        "lib/netstandard1.3/MailChimp.Net.dll",
-        "mailchimp.net.v3.4.2.1.nupkg.sha512",
-        "mailchimp.net.v3.nuspec"
-      ]
-    },
     "Mandrill/3.1.0": {
       "sha512": "naSAcuzR/3SzfQ+XA08kIfRtVsdPkTG/0xF9Afei3Ir/pC/SaiXA3OXrVk873q4cyzI6uFHTlWflTyseBjZq8g==",
       "type": "package",
@@ -3935,19 +3894,6 @@
         "lib/netstandard1.1/Mandrill.dll",
         "mandrill.3.1.0.nupkg.sha512",
         "mandrill.nuspec"
-      ]
-    },
-    "Mandrill.net/7.1.1": {
-      "sha512": "5pHsgtcYHNlsDwPhTiktnWOJzRiblmO4xbZnjppHqeHveV8aBHB040XkgbLWZSTML1PnyEOD6nAPj4hGiXfdeg==",
-      "type": "package",
-      "path": "mandrill.net/7.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net461/Mandrill.net.dll",
-        "lib/netstandard2.0/Mandrill.net.dll",
-        "mandrill.net.7.1.1.nupkg.sha512",
-        "mandrill.net.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -11452,9 +11398,6 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "CloudinaryDotNet >= 1.9.1",
-      "MailChimp.NET >= 1.1.92",
-      "MailChimp.Net.V3 >= 4.2.1",
-      "Mandrill.net >= 7.1.1",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 3.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.0.0",
@@ -11511,6 +11454,9 @@
         }
       },
       "warningProperties": {
+        "noWarn": [
+          "NU1701"
+        ],
         "warnAsError": [
           "NU1605"
         ]
@@ -11522,18 +11468,6 @@
           "CloudinaryDotNet": {
             "target": "Package",
             "version": "[1.9.1, )"
-          },
-          "MailChimp.NET": {
-            "target": "Package",
-            "version": "[1.1.92, )"
-          },
-          "MailChimp.Net.V3": {
-            "target": "Package",
-            "version": "[4.2.1, )"
-          },
-          "Mandrill.net": {
-            "target": "Package",
-            "version": "[7.1.1, )"
           },
           "Microsoft.AspNetCore.Cors": {
             "target": "Package",
@@ -11607,27 +11541,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'MailChimp.NET 1.1.92' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
-      "libraryId": "MailChimp.NET",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'ServiceStack.Text 3.9.71' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
-      "libraryId": "ServiceStack.Text",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.0"
-      ]
-    }
-  ]
+  }
 }

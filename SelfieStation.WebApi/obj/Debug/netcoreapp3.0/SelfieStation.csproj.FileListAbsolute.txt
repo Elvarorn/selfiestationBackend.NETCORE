@@ -49,7 +49,6 @@ C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\D
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\dotnet-ef.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Cloudinary.Core.dll
-C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Mandrill.net.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Microsoft.Build.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Microsoft.Build.Framework.dll
@@ -131,7 +130,6 @@ C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\D
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\CloudinaryDotNet.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\obj\Debug\netcoreapp3.0\SelfieStation.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\MailChimp.dll
-C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\MailChimp.Net.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Mandrill.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\ServiceStack.Text.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll

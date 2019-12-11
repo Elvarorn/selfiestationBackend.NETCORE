@@ -170,6 +170,9 @@
           }
         },
         "warningProperties": {
+          "noWarn": [
+            "NU1701"
+          ],
           "warnAsError": [
             "NU1605"
           ]
@@ -250,6 +253,9 @@
           }
         },
         "warningProperties": {
+          "noWarn": [
+            "NU1701"
+          ],
           "warnAsError": [
             "NU1605"
           ]
@@ -261,18 +267,6 @@
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.9.1, )"
-            },
-            "MailChimp.NET": {
-              "target": "Package",
-              "version": "[1.1.92, )"
-            },
-            "MailChimp.Net.V3": {
-              "target": "Package",
-              "version": "[4.2.1, )"
-            },
-            "Mandrill.net": {
-              "target": "Package",
-              "version": "[7.1.1, )"
             },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
