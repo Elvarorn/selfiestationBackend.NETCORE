@@ -9,7 +9,7 @@ namespace SelfieStation.Services
         public void ValidateAuthorizationPrivilege(HttpContext context, string requiredMinimumPrivilege)
         {
             StringValues authToken;
-            context.Request.Headers.TryGetValue("Authorization", out authToken);
+            context.Request.Headers.TryGetValue("Auth", out authToken);
 
             if (requiredMinimumPrivilege == "admin")
             {
