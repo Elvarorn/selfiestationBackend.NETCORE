@@ -9,61 +9,58 @@ using System.Threading.Tasks;
 
 namespace SelfieStation.Services
 {
-    public class imageService : IImageService
+    // ImageService connects the ImageInfo controller to the ImageInfo repository.
+    public class ImageService : IImageService
     {
-        private IImageRepository _ImageRepository;
-        private CloudinaryService _cloudinaryService;
+        private IImageRepository _imageRepository;
         private IEmailService _emailService;
         private AuthenticationService _authService;
 
         private string whoHasAuth;
-        public imageService(IImageRepository imgRep, IEmailService emailServ)
+        public ImageService(IImageRepository imgRep, IEmailService emailServ)
         {
-            _ImageRepository = imgRep;
-            Account acc = new Account("selfie-station", "731411764737164", "z5_lgjuUEBYBOA3PR_vBqL47cMw");
-            _cloudinaryService = new CloudinaryService(acc);
+            _imageRepository = imgRep;
             _emailService = emailServ;
             _authService = new AuthenticationService();
             whoHasAuth = "admin";
         }
 
 
-        public async Task<imageInfoEntity> addImageInfo(ImageInfoInputModel imageInfo, string freeUrl, HttpContext context)
+        public async Task<ImageInfoEntity> AddImageInfo(ImageInfoInputModel imageInfo, string freeUrl, HttpContext context)
         {
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
-            string sucsess = await _emailService.sendEmailWithTemplate(imageInfo, freeUrl);
+            string sucsess = await _emailService.SendEmailWithTemplate(imageInfo, freeUrl);
 
-            return _ImageRepository.addImageInfo(imageInfo, freeUrl, sucsess);
+            return _imageRepository.AddImageInfo(imageInfo, freeUrl, sucsess);
         }
 
-        public IEnumerable<imageInfoEntity> getAllImageInfo(HttpContext context)
+        public IEnumerable<ImageInfoEntity> GetAllImageInfo(HttpContext context)
         {
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
-            return _ImageRepository.getAllImageInfo();
+            return _imageRepository.GetAllImageInfo();
         }
 
-        public imageInfoEntity getImageInfoById(int id, HttpContext context)
+        public ImageInfoEntity GetImageInfoById(int id, HttpContext context)
         {
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
-            return _ImageRepository.getImageInfoById(id);
+            return _imageRepository.GetImageInfoById(id);
         }
 
         public void UpdateImageInfoById(ImageInfoEditInputModel model, int id, HttpContext context)
         {
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
-            _ImageRepository.UpdateImageInfoById(model, id);
+            _imageRepository.UpdateImageInfoById(model, id);
         }
 
-        public string getLowresImgUrlWithAd(ImageInfoInputModel body)
+        // Creates URL for the low-res image with ads.
+        public string GetLowresImgUrlWithAd(ImageInfoInputModel body)
         {
             int index = IndexOfNth(body.Url, '/', 6) + 1;
-
             var freeImgUrl = body.Url.Insert(index, "t_SeptAD/");
-            System.Console.WriteLine(freeImgUrl);
-
             return freeImgUrl;
         }
 
+        // returns the Nth occurance of specific character( the value parameter).
         private static int IndexOfNth(string input, char value, int nth)
         {
             if (nth < 1)
@@ -78,7 +75,5 @@ namespace SelfieStation.Services
             }
             return -1;
         }
-
-
     }
 }

@@ -13,55 +13,58 @@ using SelfieStation.Services;
 
 namespace SelfieStation.WebApi.Controllers
 {
+    // Endpoints for all requests that target ads.
     [ApiController]
     [Route("api/Images")]
     public class ImageController : ControllerBase
     {
         public IImageService _imageService;
-        //public IShopifyService _shopifyService;
-        //private readonly ILogger<ImageController> _logger;
 
         public ImageController(IImageService imgServ)
         {
             _imageService = imgServ;
         }
 
+        // GET: api/images
         [HttpGet]
-        public IActionResult getAllImageInfo()
+        public IActionResult GetAllImageInfo()
         {
-            IEnumerable<imageInfoEntity> allInfo = _imageService.getAllImageInfo(this.HttpContext);
+            IEnumerable<ImageInfoEntity> allInfo = _imageService.GetAllImageInfo(this.HttpContext);
             System.Console.WriteLine("check");
             return Ok(allInfo);
         }
 
-
+        // GET: api/images/{id}
         [Route("{id:int}", Name = "GetImageInfoById")]
         [HttpGet]
-        public IActionResult getImageInfoById(int id)
+        public IActionResult GetImageInfoById(int id)
         {
-            var author = _imageService.getImageInfoById(id, this.HttpContext);
-            return Ok(author);
+            var imgInfo = _imageService.GetImageInfoById(id, this.HttpContext);
+            if (imgInfo != null)
+            {
+                return Ok(imgInfo);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
-        //[Route("/ad/{id:int}", Name = "GetImageInfoById")]
-        //public IActionResult getImageByIdLowResAd(int id)
-        // {
-        //     return Ok();
-        //}
-
+        // POST: api/images
         [HttpPost]
         public async Task<IActionResult> CreateNewImageInfo([FromBody] ImageInfoInputModel body)
         {
             if (!ModelState.IsValid) { return BadRequest("Model is not properly formatted."); }
 
-            string lowresUrl = _imageService.getLowresImgUrlWithAd(body);
-            var entity = await _imageService.addImageInfo(body, lowresUrl, this.HttpContext);
+            string lowresUrl = _imageService.GetLowresImgUrlWithAd(body);
+            var entity = await _imageService.AddImageInfo(body, lowresUrl, this.HttpContext);
 
 
             return CreatedAtRoute("GetImageInfoById", new { id = entity.ID }, null);
         }
 
 
+        // PUT: api/images/{id}
         [Route("{id:int}")]
         [HttpPut]
         public IActionResult UpdateImageInfoById([FromBody] ImageInfoEditInputModel body, int id)

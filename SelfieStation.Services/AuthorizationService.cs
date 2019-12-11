@@ -4,6 +4,7 @@ using Microsoft.Extensions.Primitives;
 
 namespace SelfieStation.Services
 {
+    // Handles Authorization for both the AdController and the ImageInfoController.
     public class AuthenticationService
     {
         public void ValidateAuthorizationPrivilege(HttpContext context, string requiredMinimumPrivilege)
@@ -13,14 +14,14 @@ namespace SelfieStation.Services
 
             if (requiredMinimumPrivilege == "admin")
             {
-                //Do nothing, correct privilege established
                 if (isAdmin(authToken)) { return; }
             }
 
-            //Current privilege not recognized or incorrect
+            // Current privilege not recognized or incorrect.
             throw new UnauthorizedAccessException("Unauthorized access!");
         }
 
+        // Checks if the request token matches the server token.
         public bool isAdmin(string token)
         {
             if (token == "644ebb11-2e70-4f94-9b2e-78ca0efaed0c")

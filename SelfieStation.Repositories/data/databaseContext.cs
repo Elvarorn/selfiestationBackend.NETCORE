@@ -10,7 +10,7 @@ namespace SelfieStation.Repositories.data
     public class databaseContext : DbContext
     {
 
-        public DbSet<imageInfoEntity> imageInfo { get; set; }
+        public DbSet<ImageInfoEntity> imageInfo { get; set; }
         public DbSet<AdEntity> adInfo { get; set; }
 
         public databaseContext(DbContextOptions<databaseContext> options) : base(options)
@@ -22,7 +22,7 @@ namespace SelfieStation.Repositories.data
         {
 
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<imageInfoEntity>().HasKey(t => t.ID);
+            modelBuilder.Entity<ImageInfoEntity>().HasKey(t => t.ID);
             modelBuilder.Entity<AdEntity>().HasKey(k => k.Id);
 
         }

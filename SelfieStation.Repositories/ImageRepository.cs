@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SelfieStation.Repositories
 {
+    // Reads and writes to the ImageInfo table in the database.
     public class ImageRepository : IImageRepository
     {
         protected databaseContext _context;
@@ -17,7 +18,7 @@ namespace SelfieStation.Repositories
             _context = context;
         }
 
-        public imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo, string freeUrl, string success)
+        public ImageInfoEntity AddImageInfo(ImageInfoInputModel imageInfo, string freeUrl, string success)
         {
             bool emailSent = false;
             if (success.ToLower() == "sent")
@@ -25,7 +26,8 @@ namespace SelfieStation.Repositories
                 emailSent = true;
             }
 
-            imageInfoEntity newEnt = new imageInfoEntity()
+            // Create the entity to add to the database.
+            ImageInfoEntity newEnt = new ImageInfoEntity()
             {
                 imageGUID = imageInfo.imageGUID,
                 email = imageInfo.email,
@@ -43,15 +45,18 @@ namespace SelfieStation.Repositories
 
         }
 
-        public IEnumerable<imageInfoEntity> getAllImageInfo()
+        public IEnumerable<ImageInfoEntity> GetAllImageInfo()
         {
             return _context.imageInfo;
         }
 
-        public imageInfoEntity getImageInfoById(int id)
+        public ImageInfoEntity GetImageInfoById(int id)
         {
             var entity = _context.imageInfo.FirstOrDefault(r => r.ID == id);
-            if (entity == null) { return null; /* throw some exception */ }
+            if (entity == null)
+            {
+                return null;
+            }
             return entity;
         }
 

@@ -2,7 +2,7 @@ using System;
 
 namespace SelfieStation.Models.DTO
 {
-    public class imageInfoDto
+    public class ImageInfoDto
     {
         public int ID;
         public string imageGUID { get; set; }

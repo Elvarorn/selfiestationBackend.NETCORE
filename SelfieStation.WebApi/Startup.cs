@@ -34,12 +34,13 @@ namespace SelfieStation
             services.AddDbContextPool<databaseContext>(options => options.UseSqlServer(connection, b => b.MigrationsAssembly("SelfieStation")));
 
             services.AddControllers();
+
+            // Dependancy Injection.
             services.AddScoped<IImageRepository, ImageRepository>();
             services.AddScoped<IAdRepository, AdRepository>();
             services.AddScoped<IAdService, AdService>();
-            services.AddScoped<IImageService, imageService>();
+            services.AddScoped<IImageService, ImageService>();
             services.AddScoped<IEmailService, EmailService>();
-            //services.AddScoped<IShopifyService, ShopifyService>();
 
 
             services.AddSwaggerGen(c =>

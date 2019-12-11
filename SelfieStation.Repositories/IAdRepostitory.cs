@@ -5,6 +5,7 @@ using SelfieStation.Models.Entities;
 
 namespace SelfieStation.Repositories
 {
+    // Reads and writes to the Ad table in the database.
     public interface IAdRepository
     {
         IEnumerable<AdEntity> GetadInfo();

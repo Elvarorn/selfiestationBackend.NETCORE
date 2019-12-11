@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SelfieStation.Models.Entities
 {
-    public class imageInfoEntity
+    public class ImageInfoEntity
     {
         public int ID { get; set; }
         [Required]

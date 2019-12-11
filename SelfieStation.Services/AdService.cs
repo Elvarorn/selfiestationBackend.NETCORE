@@ -8,24 +8,20 @@ using Microsoft.EntityFrameworkCore;
 using SelfieStation.Models.Entities;
 using SelfieStation.Repositories.data;
 using SelfieStation.Services;
-using CloudinaryDotNet;
 
 namespace SelfieStation.Repositories
 {
+    // Adservice connects the Ad controller to the Ad repository.
     public class AdService : IAdService
     {
 
         private IAdRepository _adRepository;
-        private CloudinaryService _cloudinaryService;
         private AuthenticationService _authService;
-
         private string whoHasAuth;
 
         public AdService(IAdRepository adRepository)
         {
             _adRepository = adRepository;
-            Account acc = new Account("selfie-station", "731411764737164", "z5_lgjuUEBYBOA3PR_vBqL47cMw");
-            _cloudinaryService = new CloudinaryService(acc);
             _authService = new AuthenticationService();
             whoHasAuth = "admin";
 
@@ -35,7 +31,6 @@ namespace SelfieStation.Repositories
         public IEnumerable<AdEntity> GetadInfo(HttpContext context)
         {
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
-
             return _adRepository.GetadInfo();
         }
 
@@ -54,7 +49,6 @@ namespace SelfieStation.Repositories
 
         public async Task<ActionResult<AdEntity>> PostAd(AdEntity adEntity, HttpContext context)
         {
-
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
             return await _adRepository.PostAd(adEntity);
         }
@@ -62,7 +56,6 @@ namespace SelfieStation.Repositories
 
         public async Task<ActionResult<AdEntity>> DeleteAd(int id, HttpContext context)
         {
-
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
             return await _adRepository.DeleteAd(id);
         }

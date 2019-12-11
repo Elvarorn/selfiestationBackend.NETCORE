@@ -14,13 +14,14 @@ using SelfieStation.Models.InputModels;
 
 namespace SelfieStation.Services
 {
+    // EmailService handles Mandrill and Mailchimp. it sends emails, believe it or not.
     public class EmailService : IEmailService
     {
 
-        public async Task<string> sendEmailWithTemplate(ImageInfoInputModel imageInfo, string freeUrl)
+        public async Task<string> SendEmailWithTemplate(ImageInfoInputModel imageInfo, string freeUrl)
         {
 
-            // populate merge tags
+            // populate the MailChimp merge tags.
             Dictionary<string, string> dict = new Dictionary<string, string>()
             {
                 {"IMAGEURL", freeUrl},

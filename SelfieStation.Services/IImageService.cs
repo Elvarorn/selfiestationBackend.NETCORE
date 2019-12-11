@@ -11,12 +11,12 @@ namespace SelfieStation.Services
 {
     public interface IImageService
     {
-        imageInfoEntity getImageInfoById(int id, HttpContext context);
-        IEnumerable<imageInfoEntity> getAllImageInfo(HttpContext context);
-        Task<imageInfoEntity> addImageInfo(ImageInfoInputModel imageInfo, string freeUrl, HttpContext context);
+        ImageInfoEntity GetImageInfoById(int id, HttpContext context);
+        IEnumerable<ImageInfoEntity> GetAllImageInfo(HttpContext context);
+        Task<ImageInfoEntity> AddImageInfo(ImageInfoInputModel imageInfo, string freeUrl, HttpContext context);
 
         void UpdateImageInfoById(ImageInfoEditInputModel model, int id, HttpContext context);
-        string getLowresImgUrlWithAd(ImageInfoInputModel body);
+        string GetLowresImgUrlWithAd(ImageInfoInputModel body);
 
 
 

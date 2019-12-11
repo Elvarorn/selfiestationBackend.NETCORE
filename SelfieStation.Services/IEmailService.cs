@@ -14,10 +14,9 @@ using SelfieStation.Models.InputModels;
 
 namespace SelfieStation.Services
 {
+    // EmailService handles Mandrill and Mailchimp. it sends emails, believe it or not.
     public interface IEmailService
     {
-        Task<string> sendEmailWithTemplate(ImageInfoInputModel imageInfo, string freeUrl);
-        //Task<string> SendEmail(EmailMessage emailMessage, EmailAddress emailAddress = null, Dictionary<string, string> dictionary = null, string emailTemplate = "");
-        //Task<string> SendHTMLEmail(List<EmailAddress> to, string html, string subject, string from);
+        Task<string> SendEmailWithTemplate(ImageInfoInputModel imageInfo, string freeUrl);
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace SelfieStation.Services
 {
+    // Adservice connects the Ad controller to the Ad repository.
     public interface IAdService
     {
         IEnumerable<AdEntity> GetadInfo(HttpContext context);

@@ -6,11 +6,12 @@ using SelfieStation.Models.InputModels;
 
 namespace SelfieStation.Repositories
 {
+    // Reads and writes to the ImageInfo table in the database.
     public interface IImageRepository
     {
-        imageInfoEntity getImageInfoById(int id);
-        IEnumerable<imageInfoEntity> getAllImageInfo();
-        imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo, string freeUrl, string succsess);
+        ImageInfoEntity GetImageInfoById(int id);
+        IEnumerable<ImageInfoEntity> GetAllImageInfo();
+        ImageInfoEntity AddImageInfo(ImageInfoInputModel imageInfo, string freeUrl, string succsess);
         void UpdateImageInfoById(ImageInfoEditInputModel model, int id);
 
     }

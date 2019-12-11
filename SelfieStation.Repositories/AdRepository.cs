@@ -10,7 +10,7 @@ using SelfieStation.Repositories.data;
 
 namespace SelfieStation.Repositories
 {
-
+    // Reads and writes to the Ad table in the database.
     public class AdRepository : IAdRepository
     {
         protected databaseContext _context;
@@ -32,7 +32,6 @@ namespace SelfieStation.Repositories
 
             if (adEntity == null)
             {
-                //sumthin
                 return null;
             }
 
@@ -56,7 +55,7 @@ namespace SelfieStation.Repositories
             {
                 if (!AdEntityExists(id))
                 {
-                    //tjekkar hvort hann hafi búist til
+
                 }
                 else
                 {
