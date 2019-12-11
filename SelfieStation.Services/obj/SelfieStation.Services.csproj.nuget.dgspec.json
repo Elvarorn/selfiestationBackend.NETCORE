@@ -189,6 +189,10 @@
             "Mandrill": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "ShopifySharp": {
+              "target": "Package",
+              "version": "[4.22.1, )"
             }
           },
           "imports": [

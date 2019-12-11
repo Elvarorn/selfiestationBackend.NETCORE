@@ -142,3 +142,4 @@ C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\D
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Microsoft.OpenApi.dll
 C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+C:\Users\Elvar\Documents\selfiestationBackend.NETCORE\SelfieStation.WebApi\bin\Debug\netcoreapp3.0\ShopifySharp.dll

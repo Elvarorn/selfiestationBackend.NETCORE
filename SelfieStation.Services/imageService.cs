@@ -5,6 +5,7 @@ using SelfieStation.Models.Entities;
 using SelfieStation.Models.InputModels;
 using Microsoft.AspNetCore.Http;
 using CloudinaryDotNet;
+using System.Threading.Tasks;
 
 namespace SelfieStation.Services
 {
@@ -13,36 +14,43 @@ namespace SelfieStation.Services
         private IImageRepository _ImageRepository;
         private CloudinaryService _cloudinaryService;
         private IEmailService _emailService;
-        //private AuthenticationService _authService;
+        private AuthenticationService _authService;
+
+        private string whoHasAuth;
         public imageService(IImageRepository imgRep, IEmailService emailServ)
         {
             _ImageRepository = imgRep;
             Account acc = new Account("selfie-station", "731411764737164", "z5_lgjuUEBYBOA3PR_vBqL47cMw");
             _cloudinaryService = new CloudinaryService(acc);
             _emailService = emailServ;
-            //_authService = new AuthenticationService();
+            _authService = new AuthenticationService();
+            whoHasAuth = "admin";
         }
 
-        public imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo, string freeUrl)
-        {
-            _emailService.sendEmailWithTemplate(imageInfo, freeUrl);
 
-            return _ImageRepository.addImageInfo(imageInfo, freeUrl);
+        public async Task<imageInfoEntity> addImageInfo(ImageInfoInputModel imageInfo, string freeUrl, HttpContext context)
+        {
+            _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
+            string sucsess = await _emailService.sendEmailWithTemplate(imageInfo, freeUrl);
+
+            return _ImageRepository.addImageInfo(imageInfo, freeUrl, sucsess);
         }
 
         public IEnumerable<imageInfoEntity> getAllImageInfo(HttpContext context)
         {
-            //_authService.ValidateAuthorizationPrivilege(context, "admin");
+            _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
             return _ImageRepository.getAllImageInfo();
         }
 
-        public imageInfoEntity getImageInfoById(int id)
+        public imageInfoEntity getImageInfoById(int id, HttpContext context)
         {
+            _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
             return _ImageRepository.getImageInfoById(id);
         }
 
-        public void UpdateImageInfoById(ImageInfoEditInputModel model, int id)
+        public void UpdateImageInfoById(ImageInfoEditInputModel model, int id, HttpContext context)
         {
+            _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
             _ImageRepository.UpdateImageInfoById(model, id);
         }
 
@@ -70,5 +78,7 @@ namespace SelfieStation.Services
             }
             return -1;
         }
+
+
     }
 }

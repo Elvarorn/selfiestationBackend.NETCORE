@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using CloudinaryDotNet;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,7 @@ namespace SelfieStation.WebApi.Controllers
     public class ImageController : ControllerBase
     {
         public IImageService _imageService;
+        //public IShopifyService _shopifyService;
         //private readonly ILogger<ImageController> _logger;
 
         public ImageController(IImageService imgServ)
@@ -37,7 +39,7 @@ namespace SelfieStation.WebApi.Controllers
         [HttpGet]
         public IActionResult getImageInfoById(int id)
         {
-            var author = _imageService.getImageInfoById(id);
+            var author = _imageService.getImageInfoById(id, this.HttpContext);
             return Ok(author);
         }
 
@@ -48,12 +50,12 @@ namespace SelfieStation.WebApi.Controllers
         //}
 
         [HttpPost]
-        public IActionResult CreateNewImageInfo([FromBody] ImageInfoInputModel body)
+        public async Task<IActionResult> CreateNewImageInfo([FromBody] ImageInfoInputModel body)
         {
             if (!ModelState.IsValid) { return BadRequest("Model is not properly formatted."); }
 
             string lowresUrl = _imageService.getLowresImgUrlWithAd(body);
-            var entity = _imageService.addImageInfo(body, lowresUrl);
+            var entity = await _imageService.addImageInfo(body, lowresUrl, this.HttpContext);
 
 
             return CreatedAtRoute("GetImageInfoById", new { id = entity.ID }, null);
@@ -66,7 +68,7 @@ namespace SelfieStation.WebApi.Controllers
         {
             if (!ModelState.IsValid) { return BadRequest("Model is not properly formatted."); }
 
-            _imageService.UpdateImageInfoById(body, id);
+            _imageService.UpdateImageInfoById(body, id, this.HttpContext);
 
             return NoContent();
         }

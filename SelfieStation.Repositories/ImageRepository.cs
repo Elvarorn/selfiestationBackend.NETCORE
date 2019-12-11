@@ -17,14 +17,20 @@ namespace SelfieStation.Repositories
             _context = context;
         }
 
-        public imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo, string freeUrl)
+        public imageInfoEntity addImageInfo(ImageInfoInputModel imageInfo, string freeUrl, string success)
         {
+            bool emailSent = false;
+            if (success.ToLower() == "sent")
+            {
+                emailSent = true;
+            }
+
             imageInfoEntity newEnt = new imageInfoEntity()
             {
                 imageGUID = imageInfo.imageGUID,
                 email = imageInfo.email,
                 timeStamp = imageInfo.timeStamp,
-                hasEmailBeenSent = false,
+                hasEmailBeenSent = emailSent,
                 success = false,
                 hasImageBeenBought = false,
                 premiumUrl = imageInfo.Url,

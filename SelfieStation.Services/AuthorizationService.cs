@@ -11,12 +11,7 @@ namespace SelfieStation.Services
             StringValues authToken;
             context.Request.Headers.TryGetValue("Authorization", out authToken);
 
-            if (requiredMinimumPrivilege == "auth")
-            {
-                //Do nothing, correct privilege established
-                if (isAuth(authToken) || isAdmin(authToken)) { return; }
-            }
-            else if (requiredMinimumPrivilege == "admin")
+            if (requiredMinimumPrivilege == "admin")
             {
                 //Do nothing, correct privilege established
                 if (isAdmin(authToken)) { return; }
@@ -26,20 +21,9 @@ namespace SelfieStation.Services
             throw new UnauthorizedAccessException("Unauthorized access!");
         }
 
-
-        public bool isAuth(string token)
-        {
-            if (token == "auth")
-            {
-                return true;
-            }
-
-            return false;
-        }
-
         public bool isAdmin(string token)
         {
-            if (token == "admin")
+            if (token == "644ebb11-2e70-4f94-9b2e-78ca0efaed0c")
             {
                 return true;
             }

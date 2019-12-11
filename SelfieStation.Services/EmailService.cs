@@ -17,13 +17,12 @@ namespace SelfieStation.Services
     public class EmailService : IEmailService
     {
 
-        public async Task<EmailResult> sendEmailWithTemplate(ImageInfoInputModel imageInfo, string freeUrl)
+        public async Task<string> sendEmailWithTemplate(ImageInfoInputModel imageInfo, string freeUrl)
         {
 
             // populate merge tags
             Dictionary<string, string> dict = new Dictionary<string, string>()
             {
-                {"CUSTOMERNAME", "Dagurching"},
                 {"IMAGEURL", freeUrl},
                 {"CURRENT_YEAR", "2019"},
                 {"COMPANY", "Selfie Station"}
@@ -36,9 +35,11 @@ namespace SelfieStation.Services
             address.Type = "to";
             address.Email = imageInfo.email;
 
+            //Adding email address to list
             List<EmailAddress> toEmail = new List<EmailAddress>();
             toEmail.Add(address);
 
+            //Creating the email to send.
             EmailMessage emailMsg = new EmailMessage();
             emailMsg.FromName = "Selfie Station";
             emailMsg.FromEmail = "photos@selfiestation.is";
@@ -50,7 +51,7 @@ namespace SelfieStation.Services
 
             var success = await SendEmail(emailMsg, address, dict, template);
 
-            return null;
+            return success;
         }
         private static async Task<string> SendEmail(EmailMessage emailMessage, EmailAddress emailAddress = null, Dictionary<string, string> dictionary = null, string emailTemplate = "")
         {
@@ -82,38 +83,6 @@ namespace SelfieStation.Services
 
             return results.FirstOrDefault().Status.ToString();
         }
-
-        // -----------------------------------------------------------------------------------------------------------------------
-
-
-        public static async Task<string> SendHTMLEmail(List<EmailAddress> to, string html, string subject, string from)
-        {
-            try
-            {
-                EmailMessage message = new EmailMessage();
-                Mandrill.MandrillApi api = new Mandrill.MandrillApi("API key");
-
-
-
-                message.FromName = "From name";
-                message.FromEmail = from;
-                message.To = to;
-                message.Subject = subject;
-
-                message.Html = html;
-
-                Mandrill.Requests.Messages.SendMessageRequest request = new Mandrill.Requests.Messages.SendMessageRequest(message);
-                List<EmailResult> results = await api.SendMessage(request);
-
-                return "ok";
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
-
-
 
     }
 }

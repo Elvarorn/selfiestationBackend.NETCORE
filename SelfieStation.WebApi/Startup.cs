@@ -39,6 +39,7 @@ namespace SelfieStation
             services.AddScoped<IAdService, AdService>();
             services.AddScoped<IImageService, imageService>();
             services.AddScoped<IEmailService, EmailService>();
+            //services.AddScoped<IShopifyService, ShopifyService>();
 
 
             services.AddSwaggerGen(c =>

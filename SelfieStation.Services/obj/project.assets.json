@@ -924,6 +924,20 @@
           "lib/net35/ServiceStack.Text.dll": {}
         }
       },
+      "ShopifySharp/4.22.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "microsoft.extensions.primitives": "1.1.0",
+          "newtonsoft.json": "10.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/ShopifySharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/ShopifySharp.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3273,6 +3287,20 @@
         "lib/sl5/ServiceStack.Text.dll",
         "servicestack.text.3.9.71.nupkg.sha512",
         "servicestack.text.nuspec"
+      ]
+    },
+    "ShopifySharp/4.22.1": {
+      "sha512": "NjpxqW1KX4dGrMmRTqpH8kxQjXJBwiOQN61dJsOsX6CghdIf3jK7cK5cV+y31GLf0Za64/l2bH9QLUVzEur//A==",
+      "type": "package",
+      "path": "shopifysharp/4.22.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ShopifySharp.dll",
+        "lib/netcoreapp2.1/ShopifySharp.dll",
+        "lib/netstandard1.4/ShopifySharp.dll",
+        "shopifysharp.4.22.1.nupkg.sha512",
+        "shopifysharp.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -7160,7 +7188,8 @@
       "MailChimp.NET >= 1.1.92",
       "Mandrill >= 3.1.0",
       "SelfieStation.Models >= 1.0.0",
-      "SelfieStation.Repositories >= 1.0.0"
+      "SelfieStation.Repositories >= 1.0.0",
+      "ShopifySharp >= 4.22.1"
     ]
   },
   "packageFolders": {
@@ -7222,6 +7251,10 @@
           "Mandrill": {
             "target": "Package",
             "version": "[3.1.0, )"
+          },
+          "ShopifySharp": {
+            "target": "Package",
+            "version": "[4.22.1, )"
           }
         },
         "imports": [

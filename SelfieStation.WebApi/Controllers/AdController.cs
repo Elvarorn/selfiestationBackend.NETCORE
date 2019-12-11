@@ -23,20 +23,20 @@ namespace SelfieStation.WebApi.Controllers
             _adService = adService;
         }
 
-        // GET: api/Ad
+        // GET: api/Ads
         [HttpGet]
         public ActionResult GetadInfo()
         {
-            var ching = _adService.GetadInfo();
+            var ching = _adService.GetadInfo(this.HttpContext);
             Debug.WriteLine(ching);
             return Ok(ching);
         }
 
-        // GET: api/Ad/5
+        // GET: api/Ads/5
         [HttpGet("{id}")]
         public async Task<ActionResult<AdEntity>> GetAdEntity(int id)
         {
-            var adEntity = await _adService.GetAd(id);
+            var adEntity = await _adService.GetAd(id, this.HttpContext);
 
             if (adEntity == null)
             {
@@ -46,7 +46,7 @@ namespace SelfieStation.WebApi.Controllers
             return Ok(adEntity);
         }
 
-        // PUT: api/Ad/5
+        // PUT: api/Ads/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
@@ -57,20 +57,20 @@ namespace SelfieStation.WebApi.Controllers
                 return BadRequest();
             }
 
-            await _adService.PutAd(id, adEntity);
+            await _adService.PutAd(id, adEntity, this.HttpContext);
 
             return NoContent();
         }
-
+        // POST: api/Ads/5
         [HttpPost]
         public async Task<ActionResult<AdEntity>> PostAdEntity(AdEntity adEntity)
         {
-            var adEntityCreated = await _adService.PostAd(adEntity);
+            var adEntityCreated = await _adService.PostAd(adEntity, this.HttpContext);
 
             return CreatedAtAction("GetAdEntity", new { id = adEntity.Id }, adEntity);
         }
 
-        // DELETE: api/Ad/5
+        // DELETE: api/Ads/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<AdEntity>> DeleteAdEntity(int id)
         {
@@ -79,7 +79,7 @@ namespace SelfieStation.WebApi.Controllers
                 return NotFound();
             }
 
-            return await _adService.DeleteAd(id);
+            return await _adService.DeleteAd(id, this.HttpContext);
         }
 
         private bool AdEntityExists(int id)

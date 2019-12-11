@@ -1880,6 +1880,19 @@
           "lib/net35/ServiceStack.Text.dll": {}
         }
       },
+      "ShopifySharp/4.22.1": {
+        "type": "package",
+        "dependencies": {
+          "microsoft.extensions.primitives": "1.1.0",
+          "newtonsoft.json": "10.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/ShopifySharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/ShopifySharp.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -3838,7 +3851,8 @@
           "MailChimp.NET": "1.1.92",
           "Mandrill": "3.1.0",
           "SelfieStation.Models": "1.0.0",
-          "SelfieStation.Repositories": "1.0.0"
+          "SelfieStation.Repositories": "1.0.0",
+          "ShopifySharp": "4.22.1"
         },
         "compile": {
           "bin/placeholder/SelfieStation.Services.dll": {}
@@ -6451,6 +6465,20 @@
         "lib/sl5/ServiceStack.Text.dll",
         "servicestack.text.3.9.71.nupkg.sha512",
         "servicestack.text.nuspec"
+      ]
+    },
+    "ShopifySharp/4.22.1": {
+      "sha512": "NjpxqW1KX4dGrMmRTqpH8kxQjXJBwiOQN61dJsOsX6CghdIf3jK7cK5cV+y31GLf0Za64/l2bH9QLUVzEur//A==",
+      "type": "package",
+      "path": "shopifysharp/4.22.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ShopifySharp.dll",
+        "lib/netcoreapp2.1/ShopifySharp.dll",
+        "lib/netstandard1.4/ShopifySharp.dll",
+        "shopifysharp.4.22.1.nupkg.sha512",
+        "shopifysharp.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/4.0.1": {
@@ -11437,6 +11465,7 @@
       "Newtonsoft.Json >= 12.0.3",
       "SelfieStation.Models >= 1.0.0",
       "SelfieStation.Services >= 1.0.0",
+      "ShopifySharp >= 4.22.1",
       "Swashbuckle.AspNetCore >= 4.0.1",
       "Swashbuckle.AspNetCore.SwaggerGen >= 5.0.0-rc4",
       "Swashbuckle.AspNetCore.SwaggerUi >= 5.0.0-rc4"
@@ -11539,6 +11568,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "ShopifySharp": {
+            "target": "Package",
+            "version": "[4.22.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

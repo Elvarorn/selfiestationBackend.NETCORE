@@ -38,6 +38,7 @@
           "Newtonsoft.Json": "12.0.3",
           "SelfieStation.Models": "1.0.0",
           "SelfieStation.Services": "1.0.0",
+          "ShopifySharp": "4.22.1",
           "Swashbuckle.AspNetCore": "4.0.1",
           "Swashbuckle.AspNetCore.SwaggerGen": "5.0.0-rc4",
           "Swashbuckle.AspNetCore.SwaggerUI": "5.0.0-rc4",
@@ -1653,6 +1654,21 @@
           "lib/net35/ServiceStack.Text.dll": {}
         }
       },
+      "ShopifySharp/4.22.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.0.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/ShopifySharp.dll": {
+            "assemblyVersion": "4.22.1.0",
+            "fileVersion": "4.22.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/ShopifySharp.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/4.0.1": {
         "dependencies": {
           "Swashbuckle.AspNetCore.Swagger": "5.0.0-rc4",
@@ -2907,7 +2923,8 @@
           "MailChimp.NET": "1.1.92",
           "Mandrill": "3.1.0",
           "SelfieStation.Models": "1.0.0",
-          "SelfieStation.Repositories": "1.0.0"
+          "SelfieStation.Repositories": "1.0.0",
+          "ShopifySharp": "4.22.1"
         },
         "runtime": {
           "SelfieStation.Services.dll": {}
@@ -5420,6 +5437,13 @@
       "sha512": "sha512-+nIZF3d2o50W4/DjtfN21AzH1shaRlEiixgFISx3v5WD4WJVRd3WLmW75+SIiPOnCQAoZ+zbGX91hrBNkx+7xg==",
       "path": "servicestack.text/3.9.71",
       "hashPath": "servicestack.text.3.9.71.nupkg.sha512"
+    },
+    "ShopifySharp/4.22.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NjpxqW1KX4dGrMmRTqpH8kxQjXJBwiOQN61dJsOsX6CghdIf3jK7cK5cV+y31GLf0Za64/l2bH9QLUVzEur//A==",
+      "path": "shopifysharp/4.22.1",
+      "hashPath": "shopifysharp.4.22.1.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/4.0.1": {
       "type": "package",

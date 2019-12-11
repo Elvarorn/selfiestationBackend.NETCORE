@@ -9,6 +9,7 @@
     <PackageReference Include="Cloudinary.Core" Version="1.31.0" />
     <PackageReference Include="MailChimp.NET" Version="1.1.92" />
     <PackageReference Include="Mandrill" Version="3.1.0" />
+    <PackageReference Include="ShopifySharp" Version="4.22.1" />
   </ItemGroup>
 
   <PropertyGroup>

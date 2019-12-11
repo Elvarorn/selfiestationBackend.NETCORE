@@ -16,7 +16,7 @@ namespace SelfieStation.Services
 {
     public interface IEmailService
     {
-        Task<EmailResult> sendEmailWithTemplate(ImageInfoInputModel imageInfo, string freeUrl);
+        Task<string> sendEmailWithTemplate(ImageInfoInputModel imageInfo, string freeUrl);
         //Task<string> SendEmail(EmailMessage emailMessage, EmailAddress emailAddress = null, Dictionary<string, string> dictionary = null, string emailTemplate = "");
         //Task<string> SendHTMLEmail(List<EmailAddress> to, string html, string subject, string from);
     }
