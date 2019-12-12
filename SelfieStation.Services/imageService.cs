@@ -26,8 +26,8 @@ namespace SelfieStation.Services
         public async Task<ImageInfoEntity> AddImageInfo(ImageInfoInputModel imageInfo, string freeUrl, HttpContext context)
         {
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
-            string sucsess = await _emailService.SendEmailWithTemplate(imageInfo, freeUrl);
-            return _imageRepository.AddImageInfo(imageInfo, freeUrl, sucsess);
+            string succsess = await _emailService.SendEmailWithTemplate(imageInfo, freeUrl);
+            return _imageRepository.AddImageInfo(imageInfo, freeUrl, succsess);
         }
 
         public IEnumerable<ImageInfoEntity> GetAllImageInfo(HttpContext context)
@@ -56,6 +56,15 @@ namespace SelfieStation.Services
             return freeImgUrl;
         }
 
+        // Called when a user buys an image, sends premium email, saves in the database that
+        // the image has been bought, if the premium email got sent, and if everything worked in the process.
+        public async Task<string> RegisterImagePurchase(string premiumCode)
+        {
+            ImageInfoEntity imgInfo = _imageRepository.GetImageInfoByGUID(premiumCode);
+            var success = await _emailService.SendPremiumEmailWithTemplate(imgInfo);
+            await _imageRepository.RegisterImagePurchase(imgInfo, success);
+            return success;
+        }
         // returns the Nth occurance of specific character( the value parameter).
         private static int IndexOfNth(string input, char value, int nth)
         {

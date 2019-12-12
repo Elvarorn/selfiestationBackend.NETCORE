@@ -24,7 +24,6 @@ namespace SelfieStation.WebApi.Controllers
         public IActionResult GetAllImageInfo()
         {
             IEnumerable<ImageInfoEntity> allInfo = _imageService.GetAllImageInfo(this.HttpContext);
-            System.Console.WriteLine("check");
             return Ok(allInfo);
         }
 

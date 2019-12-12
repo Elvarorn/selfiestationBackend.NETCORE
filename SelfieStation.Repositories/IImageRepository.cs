@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using SelfieStation.Models.Entities;
 using SelfieStation.Models.InputModels;
 
@@ -11,5 +12,7 @@ namespace SelfieStation.Repositories
         IEnumerable<ImageInfoEntity> GetAllImageInfo();
         ImageInfoEntity AddImageInfo(ImageInfoInputModel imageInfo, string freeUrl, string succsess);
         void UpdateImageInfoById(ImageInfoEditInputModel model, int id);
+        ImageInfoEntity GetImageInfoByGUID(string premiumCode);
+        Task RegisterImagePurchase(ImageInfoEntity imgInfo, string success);
     }
 }

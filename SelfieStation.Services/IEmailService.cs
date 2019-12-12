@@ -1,13 +1,6 @@
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Mandrill.Models;
-using System.Globalization;
-using MailChimp;
 using SelfieStation.Models.InputModels;
+using SelfieStation.Models.Entities;
 
 namespace SelfieStation.Services
 {
@@ -15,5 +8,6 @@ namespace SelfieStation.Services
     public interface IEmailService
     {
         Task<string> SendEmailWithTemplate(ImageInfoInputModel imageInfo, string freeUrl);
+        Task<string> SendPremiumEmailWithTemplate(ImageInfoEntity imageInfo);
     }
 }

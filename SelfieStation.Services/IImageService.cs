@@ -13,5 +13,6 @@ namespace SelfieStation.Services
         Task<ImageInfoEntity> AddImageInfo(ImageInfoInputModel imageInfo, string freeUrl, HttpContext context);
         void UpdateImageInfoById(ImageInfoEditInputModel model, int id, HttpContext context);
         string GetLowresImgUrlWithAd(ImageInfoInputModel body);
+        Task<string> RegisterImagePurchase(string premiumCode);
     }
 }

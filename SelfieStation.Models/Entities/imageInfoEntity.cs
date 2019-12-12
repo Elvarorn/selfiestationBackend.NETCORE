@@ -16,7 +16,9 @@ namespace SelfieStation.Models.Entities
         public string premiumUrl { get; set; }
         public string freeUrl { get; set; }
         [Required]
-        public Boolean hasEmailBeenSent { get; set; } = false;
+        public Boolean hasFreeEmailBeenSent { get; set; } = false;
+        [Required]
+        public Boolean hasPremiumEmailBeenSent { get; set; } = false;
         [Required]
         public Boolean success { get; set; } = false;
         [Required]
