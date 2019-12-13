@@ -45,4 +45,12 @@ dotnet run
 ```
 
 ## Testing
-We did not start unit testing in the beginning of the project and due to time con
+The Integration tests are stored under the folder "Postman Integration Tests". as the name indicates, they are made in Postman and need to be imported to be run.
+
+The tests performed after adding an image or adding an ad needs its URL to be configured after each run of the tests
+for example after running the tests for the first time you need to https://localhost:5001/api/images/59 -> https://localhost:5001/api/images/60
+
+Unfortunately there are no Unit tests for this project.
+
+
+
