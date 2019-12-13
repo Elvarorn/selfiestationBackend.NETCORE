@@ -64,5 +64,13 @@ namespace SelfieStation.WebApi.Controllers
 
             return NoContent();
         }
+
+        // DELETE: api/images/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteImageInfo(int id)
+        {
+            await _imageService.DeleteImageInfo(id, this.HttpContext);
+            return NoContent();
+        }
     }
 }

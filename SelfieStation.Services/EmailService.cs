@@ -81,6 +81,7 @@ namespace SelfieStation.Services
 
         private static async Task<string> SendEmail(EmailMessage emailMessage, EmailAddress emailAddress = null, Dictionary<string, string> dictionary = null, string emailTemplate = "")
         {
+            // Sensitive information, needs to be properly encoded before deployment.
             Mandrill.MandrillApi api = new Mandrill.MandrillApi("rtHftXQYhGroTsPBzWBnbQ");
             List<EmailResult> results = new List<EmailResult>();
 

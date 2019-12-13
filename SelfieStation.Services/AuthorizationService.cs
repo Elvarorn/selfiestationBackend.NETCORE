@@ -24,6 +24,7 @@ namespace SelfieStation.Services
         // Checks if the request token matches the server token.
         public bool isAdmin(string token)
         {
+            // Sensitive information, needs to be properly encoded before deployment
             if (token == "644ebb11-2e70-4f94-9b2e-78ca0efaed0c")
             {
                 return true;

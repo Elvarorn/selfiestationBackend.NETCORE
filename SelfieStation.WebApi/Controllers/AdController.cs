@@ -69,8 +69,8 @@ namespace SelfieStation.WebApi.Controllers
             {
                 return NotFound();
             }
-
-            return await _adService.DeleteAd(id, this.HttpContext);
+            await _adService.DeleteAd(id, this.HttpContext);
+            return NoContent();
         }
 
         private bool AdEntityExists(int id)

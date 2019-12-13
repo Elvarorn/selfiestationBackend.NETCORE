@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "38c3017a-5a16-43d2-ac74-3cae1169d2ae",
+		"name": "Backend API  integration tests ImageInfo",
+		"description": "This collection stores our integration tests for the backend of the Selfie Station system.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all ImageInfo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f24b352d-f4ac-433b-86aa-a0a2b4cca2d6",
+						"exec": [
+							"tests[\"Status code 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"var hasContentType = responseHeaders.hasOwnProperty(\"Content-Type\");\r",
+							"tests[\"Has content type\"] = hasContentType;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/images",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"images"
+					]
+				},
+				"description": "Returns all imageInfo entities in the database."
+			},
+			"response": []
+		},
+		{
+			"name": "Get ImageInfo by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46dc0397-8df6-4859-91b0-214e2726af5d",
+						"exec": [
+							"tests[\"Status code 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"var hasContentType = responseHeaders.hasOwnProperty(\"Content-Type\");\r",
+							"tests[\"Has content type\"] = hasContentType;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/images/24",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"images",
+						"24"
+					]
+				},
+				"description": "Returns all imageInfo entities in the database."
+			},
+			"response": []
+		},
+		{
+			"name": "add imageinfo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "497248f0-54c5-4e8d-be2a-c028f1f4c66b",
+						"exec": [
+							"tests[\"Status code 201\"] = responseCode.code === 201;\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"imageGUID\": \"9d3ed6a1-c66c-4c7d-b20a-03307c931395\",\r\n        \"email\": \"elvar16@ru.is\",\r\n        \"timeStamp\": \"2019-08-14T18:51:44\",\r\n        \"Url\": \"https://res.cloudinary.com/selfie-station/image/upload/v1575472094/280bbbbe-0eff-4901-8f84-a2e6fe2a7dc7.jpg\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"images"
+					]
+				},
+				"description": "add a imageInfo entity to the database"
+			},
+			"response": []
+		},
+		{
+			"name": "Get ImageInfo by ID - after add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46dc0397-8df6-4859-91b0-214e2726af5d",
+						"exec": [
+							"tests[\"Status code 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"var hasContentType = responseHeaders.hasOwnProperty(\"Content-Type\");\r",
+							"tests[\"Has content type\"] = hasContentType;\r",
+							"\r",
+							"\r",
+							"    var jsonData = pm.response.json();\r",
+							"\r",
+							"    tests[\"Correct data was added\"] = jsonData.email === \"elvar16@ru.is\";"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/images/59",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"images",
+						"59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/images/57",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "773f27f1-fbbb-4b92-95f6-f82250d5a3d4",
+						"exec": [
+							"tests[\"Status code 204\"] = responseCode.code === 204;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/images/59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"images",
+						"59"
+					]
+				},
+				"description": "deletes the image that was just created"
+			},
+			"response": []
+		},
+		{
+			"name": "Get ImageInfo by ID - after delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46dc0397-8df6-4859-91b0-214e2726af5d",
+						"exec": [
+							"tests[\"Status code 404\"] = responseCode.code === 404;\r",
+							"\r",
+							"var hasContentType = responseHeaders.hasOwnProperty(\"Content-Type\");\r",
+							"tests[\"Has content type\"] = hasContentType;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/images/59",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"images",
+						"59"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

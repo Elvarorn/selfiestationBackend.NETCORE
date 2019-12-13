@@ -5,6 +5,7 @@ using SelfieStation.Models.Entities;
 using SelfieStation.Models.InputModels;
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace SelfieStation.Services
 {
@@ -46,6 +47,12 @@ namespace SelfieStation.Services
         {
             _authService.ValidateAuthorizationPrivilege(context, whoHasAuth);
             _imageRepository.UpdateImageInfoById(model, id);
+        }
+
+        public async Task DeleteImageInfo(int id, HttpContext httpContext)
+        {
+            _authService.ValidateAuthorizationPrivilege(httpContext, whoHasAuth);
+            await _imageRepository.DeleteImageInfo(id);
         }
 
         // Creates URL for the low-res image with ads.

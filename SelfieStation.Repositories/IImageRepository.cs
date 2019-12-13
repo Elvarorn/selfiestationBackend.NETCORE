@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using SelfieStation.Models.Entities;
 using SelfieStation.Models.InputModels;
 
@@ -14,5 +15,6 @@ namespace SelfieStation.Repositories
         void UpdateImageInfoById(ImageInfoEditInputModel model, int id);
         ImageInfoEntity GetImageInfoByGUID(string premiumCode);
         Task RegisterImagePurchase(ImageInfoEntity imgInfo, string success);
+        Task DeleteImageInfo(int id);
     }
 }

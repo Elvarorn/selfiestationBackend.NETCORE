@@ -6,6 +6,7 @@ using SelfieStation.Models.InputModels;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace SelfieStation.Repositories
 {
@@ -52,6 +53,18 @@ namespace SelfieStation.Repositories
             _context.SaveChanges();
             return newEnt;
 
+        }
+
+        public async Task DeleteImageInfo(int id)
+        {
+            var entity = await _context.imageInfo.FindAsync(id);
+            if (entity == null)
+            { }
+            else
+            {
+                _context.imageInfo.Remove(entity);
+                await _context.SaveChangesAsync();
+            }
         }
 
         public IEnumerable<ImageInfoEntity> GetAllImageInfo()

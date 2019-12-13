@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "6fd35190-e50b-4fba-80ce-cdeac2ddbbfb",
+		"name": " Backend API integration tests for ads",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Ads",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f24b352d-f4ac-433b-86aa-a0a2b4cca2d6",
+						"exec": [
+							"tests[\"Status code 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"var hasContentType = responseHeaders.hasOwnProperty(\"Content-Type\");\r",
+							"tests[\"Has content type\"] = hasContentType;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/images",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ad by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46dc0397-8df6-4859-91b0-214e2726af5d",
+						"exec": [
+							"tests[\"Status code 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"var hasContentType = responseHeaders.hasOwnProperty(\"Content-Type\");\r",
+							"tests[\"Has content type\"] = hasContentType;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/ads/17",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ads",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add ad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84b552c7-e3d7-4f81-b877-7d9f4f7707d6",
+						"exec": [
+							"tests[\"Status code 201\"] = responseCode.code === 201;\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n   \t\t\"Name\":\"INTERGRATION TEST AD\",\r\n        \"GUID\": \"b1c50664-db56-4fbb-a2bd-ab7d78595a96\",\r\n        \"ImgURL\": \"https://www.indiewire.com/wp-content/uploads/2019/11/960x0-2.jpg\"\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Ads",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Ads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get AD by ID - after add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46dc0397-8df6-4859-91b0-214e2726af5d",
+						"exec": [
+							"tests[\"Status code 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"var hasContentType = responseHeaders.hasOwnProperty(\"Content-Type\");\r",
+							"tests[\"Has content type\"] = hasContentType;\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/images/29",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"images",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete ad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "773f27f1-fbbb-4b92-95f6-f82250d5a3d4",
+						"exec": [
+							"tests[\"Status code 204\"] = responseCode.code === 204;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/ads/29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ads",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ad by ID - after delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46dc0397-8df6-4859-91b0-214e2726af5d",
+						"exec": [
+							"tests[\"Status code 404\"] = responseCode.code === 404;\r",
+							"\r",
+							"var hasContentType = responseHeaders.hasOwnProperty(\"Content-Type\");\r",
+							"tests[\"Has content type\"] = hasContentType;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "644ebb11-2e70-4f94-9b2e-78ca0efaed0c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/ads/29",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ads",
+						"29"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
